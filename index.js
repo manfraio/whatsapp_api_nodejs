@@ -5,7 +5,7 @@ const fs = require('fs')
 
 async function sendTemplateMessage() {
     const response = await axios({
-        url: 'https://graph.facebook.com/v20.0/397648603426578/messages',
+        url: 'https://graph.facebook.com/v20.0/phone_number_id/messages',
         method: 'post',
         headers: {
             'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
@@ -49,7 +49,7 @@ async function sendTemplateMessage() {
 
 async function sendTextMessage() {
     const response = await axios({
-        url: 'https://graph.facebook.com/v20.0/397648603426578/messages',
+        url: 'https://graph.facebook.com/v20.0/phone_number_id/messages',
         method: 'post',
         headers: {
             'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
@@ -70,7 +70,7 @@ async function sendTextMessage() {
 
 async function sendMediaMessage() {
     const response = await axios({
-        url: 'https://graph.facebook.com/v20.0/397648603426578/messages',
+        url: 'https://graph.facebook.com/v20.0/phone_number_id/messages',
         method: 'post',
         headers: {
             'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
@@ -98,7 +98,7 @@ async function uploadImage() {
     data.append('type', 'image/png')
 
     const response = await axios({
-        url: 'https://graph.facebook.com/v20.0/397648603426578/media',
+        url: 'https://graph.facebook.com/v20.0/phone_number_id/media',
         method: 'post',
         headers: {
             'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`
